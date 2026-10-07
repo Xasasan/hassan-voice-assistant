@@ -1,0 +1,32 @@
+# Hassan voice assistant - runtime dependencies (Python 3.11)
+# Curated subset of the original full pip-freeze (kept as requirements.freeze.txt).
+# Only the packages the pipeline actually imports, pinned to their frozen versions.
+
+# --- Core ML ---
+torch==2.0.1
+torchaudio==2.0.2
+transformers==4.44.0
+tokenizers==0.19.1
+huggingface-hub==0.30.0
+numpy==1.26.4
+
+# --- Wake word (ONNX model + onnxruntime; no tflite-runtime needed on Windows) ---
+openwakeword==0.6.0
+onnxruntime==1.23.2
+
+# --- Microphone capture / playback ---
+sounddevice==0.5.5
+PyAudio==0.2.14
+
+# --- Voice activity detection + speaker embedding (TTS voice identity) ---
+silero-vad==6.2.1
+speechbrain==0.5.14
+
+# --- Datasets (VCTK), TTS tokenization, audio I/O ---
+datasets==2.20.0
+sentencepiece==0.2.1
+librosa==0.11.0
+soundfile==0.13.1
+
+# --- LLM query (Qwen 2.5 72B via HF Inference / Novita) ---
+requests==2.32.5

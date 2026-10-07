@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.env
+pretrained_models/
+*.wav
+*.pt
+*.safetensors
+*.bin
